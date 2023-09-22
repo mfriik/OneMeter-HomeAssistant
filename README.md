@@ -1,4 +1,4 @@
-# OneMeter-Hass
+# OneMeter-HomeAssistant Integration Setup helper
 Instructions for setting up integration in Home AssistantOS to GET readings from OneMeter Cloud
 
 <h3>Rest Integration with OneMeter Cloud</h3>
