@@ -1,0 +1,31 @@
+  - scan_interval: 300
+    resource: https://cloud.onemeter.com/api/devices/<your device ID>
+    method: GET
+    headers:
+      Authorization: <API key>
+    sensor:
+      - name: "OneMeter Firmware Version"
+        unique_id: sensor.onemeterfirmware
+        value_template: "v.{{ value_json.firmware['currentVersion']}}"
+      - name: "OneMeter Last Integration Refresh"
+        unique_id: sensor.onemeterlastrefresh
+        value_template: "{{ as_timestamp(now()) | timestamp_custom('%d.%m.%y - %H:%M', true) }}"
+      - name: "OneMeter Last Readout"
+        unique_id: sensor.onemeterlastread
+        value_template: "{{ as_timestamp(value_json.lastReading['date']) | timestamp_custom('%d.%m.%y - %H:%M', true) }}"
+      - name: "OneMeter Battery Level"
+        unique_id: sensor.onemeterbattery
+        unit_of_measurement: "V"
+        value_template: "{{ value_json.lastReading.OBIS['S_1_1_2'] }}"
+      - name: "OneMeter Usage Level"
+        unique_id: sensor.onemeterenergy
+        unit_of_measurement: "kWh"
+        value_template: "{{ value_json.lastReading.OBIS['15_8_0'] }}"
+      - name: "OneMeter Current Month Consumption"
+        unique_id: sensor.onemetercurrentmonth
+        unit_of_measurement: "kWh"
+        value_template: "{{ value_json.usage['thisMonth'] | round(2) }}"
+      - name: "OneMeter Previous Month Consumption"
+        unique_id: sensor.onemeterpreviousmonth
+        unit_of_measurement: "kWh"
+        value_template: "{{ value_json.usage['previousMonth'] | round(2) }}"
