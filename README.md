@@ -31,7 +31,7 @@ After you have successfully setup the REST Integration we can move forward and a
 2. +Create Helper ``Utility meter`` (for more info on specific settings for this helper refer to [Utility Meter Documentation](https://www.home-assistant.io/integrations/utility_meter/) \
    Setup its name, and cycle and use ``sensor.onemeterenergy`` as input. Save your Helper
 4. Go to Setting>Dashboards>Energy and in ``Grid consumption`` add your newly added ``Utility Meter`` Helper
-5(Optional). You can set pricing per kWh If you want to track that
+5.(Optional). You can set pricing per kWh If you want to track that
 6. Wait, as advised per HomeAssistant OS suggestion  - After setting up a new device, it can take up to 2 hours for new data to arrive in your energy dashboard.
 
-You should start to see the vertical bars in your Energy Dashboard 
+You should start to see the vertical bars in your Energy Dashboard ;)
