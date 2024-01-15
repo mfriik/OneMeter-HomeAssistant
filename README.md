@@ -7,7 +7,7 @@ Instructions for setting up integration in Home AssistantOS to GET readings from
 ``
 rest: !include rest-integrations.yaml 
 `` 
-2. Download [rest-integrations.yaml](https://github.com/mfriik/OneMeter-Hass/blob/main/rest-integrations.yaml) and change ``<your device ID>`` & ``<API key>`` inside the file to values from [cloud.onemeter.com](https://cloud.onemeter.com/#/api) & .
+2. Download [rest-integrations.yaml](https://github.com/mfriik/OneMeter-Hass/blob/main/rest-integrations.yaml) place it in the same location as configuration.yaml and change ``<your device ID>`` & ``<API key>`` inside the file to values from [cloud.onemeter.com](https://cloud.onemeter.com/#/api) & .
 2.1(Optional) Feel free to modify the file to your needs. Add/remove sensors modify settings etc. Currently, this integration has defined 7 sensors (all are extracted from OneMeter Cloud): \
    ``sensor.onemeterfirmware`` - it will display firmware version of the OneMeter in ``v.0.23.0`` format \
    ``sensor.onemeterlastrefresh`` - this shows a DateTime of when HA sent \
