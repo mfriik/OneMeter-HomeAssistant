@@ -11,10 +11,9 @@ rest: !include rest-integrations.yaml
 2.1(Optional) Feel free to modify the file to your needs. Add/remove sensors modify settings etc. Currently, this integration has defined 7 sensors (all are extracted from OneMeter Cloud): \
    ``sensor.onemeterfirmware`` - it will display firmware version of the OneMeter in ``v.0.23.0`` format \
    ``sensor.onemeterlastrefresh`` - this shows a DateTime of when HA sent \
-    last request to Cloud (this is calculated locally not based on cloud data) \
+    last request to Cloud (this is calculated locally not based on cloud data, I used this for troubleshooting) \
    ``sensor.onemeterlastread`` - this shows the DateTime of last successful read from OneMeterDevice \
-   ``sensor.onemeterbattery`` - this shows battery voltage (kinda useless, \
-    there does not seem to be any data on battery percentage in the JSON response from cloud.onemeter.com ) \
+   ``sensor.onemeterbattery`` - this shows battery percentage \
    ``sensor.onemeterenergy`` - this is what you need, this is a reading of your energy meter \
    ``sensor.onemetercurrentmonth`` - this shows usage in the current month rounded to 2 decimal places \
    ``sensor.onemeterpreviousmonth`` - this shows usage in the previous month rounded to 2 decimal places 
